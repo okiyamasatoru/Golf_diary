@@ -1,0 +1,4 @@
+<p><%= comment.content %></p>
+<% if user_signed_in? && comment.user_id == current_user.id %>
+<p><%= link_to "Delete", [@movie, comment], method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
